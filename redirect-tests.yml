@@ -1,0 +1,19 @@
+---
+
+redirects:
+
+  - source: https://www.boone-schulz.de/?side=ueber&display=archiv&artikel=3x-ie-unter-linux--wo-gibts-denn-sowas%253Fside%3Dartikel
+    expected:
+      return_code: 200
+      redirection: false
+      content_type: "text/html"
+
+  - source: https://www.boone-schulz.de/?side=ueber&display=archiv&artikel=3x-ie-unter-linux--wo-gibts-denn-sowas%253Fside%3Dartikel
+    expected:
+      return_code: 404
+      content_type: text/html
+
+  - source: http://www.boone-schulz.de/tags
+    expected:
+      return_code: 200
+      location: https://www.boone-schulz.de/tags/
